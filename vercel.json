@@ -1,5 +1,10 @@
+
+
 {
-  "rewrites": [{ "source": "/:path*", "destination": "/index.html" }],
-  "cleanUrls": true,
-  "trailingSlash": true
+  "builds": [
+    { "src": "package.json", "use": "@vercel/static-build" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/build/$1" }
+  ]
 }
