@@ -42,24 +42,12 @@ const config: Config = {
         docs: {
           path: './', // Look for docs directly in the docs/ directory
           sidebarPath: './sidebars.ts',
+          exclude: ['**/node_modules/**'], // ignore MD files in node_modules
+     
           // Remove this to remove the "edit this page" links.
           // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -74,9 +62,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'Physical AI & Humanoid Robotics',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Panaversity Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -104,7 +92,6 @@ const config: Config = {
           position: 'left',
           label: 'Module 4: VLA',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/Panaversity/AI-Native-Textbook',
           label: 'GitHub',
@@ -118,52 +105,24 @@ const config: Config = {
         {
           title: 'Docs',
           items: [
-            {
-              label: 'Module 1: ROS 2',
-              to: '/docs/module1/chapter1',
-            },
-            {
-              label: 'Module 2: Digital Twin',
-              to: '/docs/module2/chapter5',
-            },
-            {
-              label: 'Module 3: AI-Robot Brain',
-              to: '/docs/module3/chapter9',
-            },
-            {
-              label: 'Module 4: VLA',
-              to: '/docs/module4/chapter12',
-            },
+            { label: 'Module 1: ROS 2', to: '/docs/module1/chapter1', },
+            { label: 'Module 2: Digital Twin', to: '/docs/module2/chapter5', },
+            { label: 'Module 3: AI-Robot Brain', to: '/docs/module3/chapter9', },
+            { label: 'Module 4: VLA', to: '/docs/module4/chapter12', },
           ],
         },
         {
           title: 'Community',
           items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discord.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
+            { label: 'Stack Overflow', href: 'https://stackoverflow.com/questions/tagged/docusaurus', },
+            { label: 'Discord', href: 'https://discord.com/invite/docusaurus', },
+            { label: 'X', href: 'https://x.com/docusaurus', },
           ],
         },
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/Panaversity/AI-Native-Textbook',
-            },
+            { label: 'GitHub', href: 'https://github.com/Panaversity/AI-Native-Textbook', },
           ],
         },
       ],

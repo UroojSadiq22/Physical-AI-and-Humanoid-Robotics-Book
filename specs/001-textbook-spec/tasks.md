@@ -77,8 +77,8 @@
 
 - [X] T016 [P] Review and edit all chapters for clarity, consistency, and correctness.
 - [X] T017 [P] Validate all code examples.
-- [ ] T018 Run Docusaurus build to ensure no errors.
-- [ ] T019 Validate RAG compatibility.
+- [X] T018 Run Docusaurus build to ensure no errors.
+- [X] T019 Validate RAG compatibility.
 
 ---
 
