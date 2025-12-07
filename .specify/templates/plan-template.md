@@ -31,7 +31,13 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+*   [ ] **Technical Accuracy**: Does the plan adhere to ROS 2, Gazebo, Unity, and NVIDIA Isaac standards?
+*   [ ] **Clarity for Learners**: Is the proposed solution designed to be clear and accessible for the target audience?
+*   [ ] **Consistency**: Does the plan align with Panaversity AI-native textbook standards?
+*   [ ] **Modular and Reusable Content**: Is the content structured for modularity and reuse in Docusaurus?
+*   [ ] **Structured Writing for RAG**: Is the output structured for human readability and RAG ingestion?
+*   [ ] **Progressive Learning Design**: Does the plan follow a simple-to-advanced progression?
+*   [ ] **High-Quality Explanations**: Does the plan prioritize high-quality explanations and examples?
 
 ## Project Structure
 
