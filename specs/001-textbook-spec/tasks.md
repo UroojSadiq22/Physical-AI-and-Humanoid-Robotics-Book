@@ -9,8 +9,8 @@
 
 **Purpose**: Project initialization and basic structure
 
-- [ ] T001 [P] Create Docusaurus project structure in the `docs` directory.
-- [ ] T002 [P] Configure Docusaurus sidebar for the 4 modules in `docs/sidebars.js`.
+- [X] T001 [P] Create Docusaurus project structure in the `docs` directory.
+- [X] T002 [P] Configure Docusaurus sidebar for the 4 modules in `docs/sidebars.js`.
 
 ---
 
@@ -22,10 +22,10 @@
 
 ### Implementation for User Story 1
 
-- [ ] T003 [US1] Write Chapter 1: Introduction to ROS 2, in `docs/module1/chapter1.md`.
-- [ ] T004 [US1] Write Chapter 2: ROS 2 Nodes, in `docs/module1/chapter2.md`.
-- [ ] T005 [US1] Write Chapter 3: ROS 2 Topics, in `docs/module1/chapter3.md`.
-- [ ] T006 [US1] Write Chapter 4: ROS 2 Services and Actions, in `docs/module1/chapter4.md`.
+- [X] T003 [US1] Write Chapter 1: Introduction to ROS 2, in `docs/module1/chapter1.md`.
+- [X] T004 [US1] Write Chapter 2: ROS 2 Nodes, in `docs/module1/chapter2.md`.
+- [X] T005 [US1] Write Chapter 3: ROS 2 Topics, in `docs/module1/chapter3.md`.
+- [X] T006 [US1] Write Chapter 4: ROS 2 Services and Actions, in `docs/module1/chapter4.md`.
 
 ---
 
@@ -37,10 +37,10 @@
 
 ### Implementation for User Story 2
 
-- [ ] T007 [US2] Write Chapter 5: Introduction to Simulation, in `docs/module2/chapter5.md`.
-- [ ] T008 [US2] Write Chapter 6: Building a Robot with URDF, in `docs/module2/chapter6.md`.
-- [ ] T009 [US2] Write Chapter 7: Simulating a Robot with Gazebo, in `docs/module2/chapter7.md`.
-- [ ] T010 [US2] Write Chapter 8: Simulating a Robot with Unity, in `docs/module2/chapter8.md`.
+- [X] T007 [US2] Write Chapter 5: Introduction to Simulation, in `docs/module2/chapter5.md`.
+- [X] T008 [US2] Write Chapter 6: Building a Robot with URDF, in `docs/module2/chapter6.md`.
+- [X] T009 [US2] Write Chapter 7: Simulating a Robot with Gazebo, in `docs/module2/chapter7.md`.
+- [X] T010 [US2] Write Chapter 8: Simulating a Robot with Unity, in `docs/module2/chapter8.md`.
 
 ---
 
@@ -52,9 +52,9 @@
 
 ### Implementation for User Story 3
 
-- [ ] T011 [US3] Write Chapter 9: Introduction to NVIDIA Isaac, in `docs/module3/chapter9.md`.
-- [ ] T012 [US3] Write Chapter 10: Isaac Sim for Perception, in `docs/module3/chapter10.md`.
-- [ ] T013 [US3] Write Chapter 11: Integrating Isaac ROS Gems, in `docs/module3/chapter11.md`.
+- [X] T011 [US3] Write Chapter 9: Introduction to NVIDIA Isaac, in `docs/module3/chapter9.md`.
+- [X] T012 [US3] Write Chapter 10: Isaac Sim for Perception, in `docs/module3/chapter10.md`.
+- [X] T013 [US3] Write Chapter 11: Integrating Isaac ROS Gems, in `docs/module3/chapter11.md`.
 
 ---
 
@@ -66,8 +66,8 @@
 
 ### Implementation for User Story 4
 
-- [ ] T014 [US4] Write Chapter 12: Introduction to VLAs, in `docs/module4/chapter12.md`.
-- [ ] T015 [US4] Write Chapter 13: Building the Capstone Project, in `docs/module4/chapter13.md`.
+- [X] T014 [US4] Write Chapter 12: Introduction to VLAs, in `docs/module4/chapter12.md`.
+- [X] T015 [US4] Write Chapter 13: Building the Capstone Project, in `docs/module4/chapter13.md`.
 
 ---
 
@@ -75,8 +75,8 @@
 
 **Purpose**: Improvements that affect multiple user stories
 
-- [ ] T016 [P] Review and edit all chapters for clarity, consistency, and correctness.
-- [ ] T017 [P] Validate all code examples.
+- [X] T016 [P] Review and edit all chapters for clarity, consistency, and correctness.
+- [X] T017 [P] Validate all code examples.
 - [ ] T018 Run Docusaurus build to ensure no errors.
 - [ ] T019 Validate RAG compatibility.
 
