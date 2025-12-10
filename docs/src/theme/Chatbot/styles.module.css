@@ -1,0 +1,335 @@
+.chatbotContainer {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.fab {
+  background-color: var(--ifm-color-primary); /* Docusaurus primary color */
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--ifm-shadow-md);
+  transition: background-color 0.3s ease;
+}
+
+.fab:hover {
+  background-color: var(--ifm-color-primary-dark);
+}
+
+.chatWindow {
+  background-color: var(--ifm-background-color); /* Docusaurus background */
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  box-shadow: var(--ifm-shadow-lg);
+  width: 350px; /* Adjust as needed */
+  height: 500px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px; /* Space between FAB and window */
+  overflow: hidden;
+}
+
+.chatHeader {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-align: center;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatHeader h3 {
+  margin: 0;
+  color: inherit;
+  flex-grow: 1;
+}
+
+.logoutButton {
+  background-color: var(--ifm-color-primary-dark);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.logoutButton:hover {
+  background-color: var(--ifm-color-primary-darker);
+}
+
+.messageList {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.messageInputContainer {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid var(--ifm-color-emphasis-300);
+  background-color: var(--ifm-background-color);
+}
+
+.messageInputContainer input {
+  flex-grow: 1;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 20px;
+  padding: 8px 15px;
+  margin-right: 10px;
+  background-color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-font-color-base);
+}
+
+.messageInputContainer input:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px var(--ifm-color-primary-light);
+}
+
+.messageInputContainer button {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.messageInputContainer button:hover:not(:disabled) {
+  background-color: var(--ifm-color-primary-dark);
+}
+
+.messageInputContainer button:disabled {
+  background-color: var(--ifm-color-emphasis-300);
+  cursor: not-allowed;
+}
+
+.messageBubble {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.messageBubble.user {
+  justify-content: flex-end;
+}
+
+.messageBubble.bot {
+  justify-content: flex-start;
+}
+
+.messageContent {
+  max-width: 80%;
+  padding: 8px 12px;
+  border-radius: 15px;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.messageBubble.user .messageContent {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border-bottom-right-radius: 2px;
+}
+
+.messageBubble.bot .messageContent {
+  background-color: var(--ifm-color-emphasis-200);
+  color: var(--ifm-font-color-base);
+  border-bottom-left-radius: 2px;
+}
+
+.messageAuthor {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-top: 5px;
+  text-align: right;
+}
+
+.messageBubble.bot .messageAuthor {
+    text-align: left;
+}
+
+.loadingIndicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.loadingIndicator span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: var(--ifm-color-primary);
+  border-radius: 50%;
+  margin: 0 3px;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.loadingIndicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loadingIndicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Login Modal Styles */
+.loginModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.loginModal {
+  background-color: var(--ifm-background-color);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: var(--ifm-shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 300px;
+  position: relative;
+}
+
+.loginModal h3 {
+  margin-top: 0;
+  color: var(--ifm-font-color-base);
+  text-align: center;
+}
+
+.loginModal form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loginModal input {
+  padding: 10px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 5px;
+  background-color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-font-color-base);
+}
+
+.loginModal button {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loginModal button:hover:not(:disabled) {
+  background-color: var(--ifm-color-primary-dark);
+}
+
+.authError {
+  color: var(--ifm-color-danger);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.toggleAuthMode {
+  background: none;
+  border: none;
+  color: var(--ifm-color-primary);
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+.toggleAuthMode:hover {
+  color: var(--ifm-color-primary-dark);
+}
+
+.closeModalButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.closeModalButton:hover {
+  color: var(--ifm-color-emphasis-900);
+}
+
+/* Ask about selection button */
+.askAboutSelectionButton {
+  position: absolute; /* Will be dynamically positioned by JS */
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  box-shadow: var(--ifm-shadow-md);
+  z-index: 1001; /* Above other content, but below modal */
+  white-space: nowrap;
+}
+
+.askAboutSelectionButton:hover {
+  background-color: var(--ifm-color-primary-dark);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .chatbotContainer {
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .chatWindow {
+    width: calc(100vw - 20px);
+    height: calc(100vh - 80px);
+    margin-top: 5px;
+  }
+
+  .loginModal {
+    width: 90vw;
+  }
+}

@@ -44,16 +44,13 @@ const config: Config = {
       {
         docs: {
           path: './', // Look for docs directly in the docs/ directory
-          sidebarPath: './sidebars.ts',
+          sidebarPath: require.resolve('./sidebars.ts'), // Use require.resolve for CommonJS compatibility
           exclude: ['**/node_modules/**'], // ignore MD files in node_modules
-     
-          // Remove this to remove the "edit this page" links.
-          // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
 
         theme: {
           customCss: './src/css/custom.css',
-        },
+        }
       } satisfies Preset.Options,
     ],
   ],
@@ -72,33 +69,10 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'mod1',
+          type: 'docSidebar', // Changed to docSidebar
+          sidebarId: 'bookSidebar', // Explicitly use the bookSidebar
           position: 'left',
-          label: 'Module 1: ROS 2',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'mod2',
-          position: 'left',
-          label: 'Module 2: Digital Twin',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'mod3',
-          position: 'left',
-          label: 'Module 3: AI-Robot Brain',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'mod4',
-          position: 'left',
-          label: 'Module 4: VLA',
-        },
-        {
-          href: 'https://github.com/Panaversity/AI-Native-Textbook',
-          label: 'GitHub',
-          position: 'right',
+          label: 'Book',
         },
       ],
     },
